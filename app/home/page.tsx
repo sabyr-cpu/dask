@@ -74,12 +74,7 @@ export default function Home() {
       <div className="ml-[256px]">
         <div className="p-8">
           <div className="text-5xl font-bold flex items-center justify-center gap-6">
-            Расписание нa
-            <Select
-              value={selectedOption}
-              onChange={handleChange}
-              options={options}
-            />
+            Расписание
           </div>
           <div className="flex justify-center mt-8 gap-2">
             <Popover>

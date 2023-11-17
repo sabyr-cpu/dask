@@ -21,6 +21,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
+  DialogClose
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -140,9 +141,11 @@ export default function Schedule() {
                   {v.additionalInfo}
                 </p>
                 <DialogFooter>
-                  <Button type="submit" variant="secondary">
-                    Закрыть
-                  </Button>
+                  <DialogClose asChild>
+                    <Button type="submit" variant="secondary">
+                      Закрыть
+                    </Button> 
+                  </DialogClose>
                   <Button
                     type="submit"
                     className={v.done ? "bg-red-500 hover:bg-red-400" : "bg-green-500 hover:bg-green-400"}

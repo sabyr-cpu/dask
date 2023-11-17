@@ -29,19 +29,19 @@ import { useState } from "react";
 export default function Notifications() {
   const [data, setData] = useState([
     {
-      title: "You didn\'t complete your homework",
-      by: "Sardarbek Kuanyshbek",
-      short: "Congratulations, you won 600 free spins",
-      long: "Dear John Doe, you didn\`t complete your homework, I am dissapointed. I would never believe, that those macaroni would be so hot, that my knees would drive crazy truck, without being interested in bunny holding IPhone Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit voluptatem aliquam blanditiis fugit obcaecati repudiandae ut. минус вайб короче...",
+      title: "Ты не сделал домашнюю работу",
+      by: "Учитель математики",
+      short: "Сильно отстаешь от программы",
+      long: "Не делая домашнюю работу, ты все сильнее и сильнее отстаешь от программы. Соберись и возьмись за учебу.",
       time_passed: "8h",
       isread: false,
     },
     {
-      title: "Return my pen please!",
-      by: "Gestapo Valverde",
-      short: "Hello, u tek mai pen riturn or i...",
-      long: "u nou vat i do? pliz return i nid pen or i kent du homvork ;(",
-      time_passed: "3h 32mins",
+      title: "Давай встретимся после уроков",
+      by: "МА",
+      short: "Привет го встретимся",
+      long: "Привет го встретимся после уроков, у меня они заканчиваются в 17.00, а у тебя?",
+      time_passed: "3 часа 2",
       isread: true
     },
   ]);
