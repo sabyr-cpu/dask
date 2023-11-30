@@ -44,11 +44,11 @@ export default function Home() {
     console.log(dayTable);
   }, []);
 
-  const handleNameChange = (event) => {
+  const handleNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setName(event.target.value);
   };
 
-  const handleRoomChange = (event) => {
+  const handleRoomChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setRoom(event.target.value);
   };
   const [selectedOption, setSelectedOption] = useState({ value: "day", label: "день" });
@@ -60,7 +60,7 @@ export default function Home() {
   ];
 
   // Handle change in selection
-  const handleChange = (selectedOption) => {
+  const handleChange = (selectedOption: { value: string, label: string }) => {
     console.log(setSelectedOption)
     setSelectedOption(selectedOption);
     

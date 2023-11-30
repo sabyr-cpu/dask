@@ -96,7 +96,7 @@ export default function Schedule() {
       </>
     );
   }
-  function handleCompletion(taskID) {
+  function handleCompletion(taskID: number) {
     console.log(taskID)
     let i = taskID
     let newdata = [...data]
@@ -116,7 +116,7 @@ export default function Schedule() {
               </Button>
               <CardDescription>
                 <Badge variant="secondary">{v.subject}</Badge> |{" "}
-                <Badge variant="destructive" className={v.done ? "bg-green-500 hover:bg-green-400" : null}>{v.done ? 'Сделано': 'Не сделано'}</Badge>
+                <Badge variant="destructive" className={v.done ? "bg-green-500 hover:bg-green-400" : undefined}>{v.done ? 'Сделано': 'Не сделано'}</Badge>
               </CardDescription>
             </CardHeader>
             <Dialog>
@@ -133,7 +133,7 @@ export default function Schedule() {
                   <DialogDescription>
                     <CardDescription>
                       <Badge variant="secondary">{v.subject}</Badge> |{" "}
-                      <Badge variant="destructive" className={v.done ? "bg-green-500 hover:bg-green-400" : null}>{v.done ? 'Сделано': 'Не сделано'}</Badge>
+                      <Badge variant="destructive" className={v.done ? "bg-green-500 hover:bg-green-400" : undefined}>{v.done ? 'Сделано': 'Не сделано'}</Badge>
                     </CardDescription>
                   </DialogDescription>
                 </DialogHeader>

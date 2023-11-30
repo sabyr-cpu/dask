@@ -30,24 +30,24 @@ export default function Home() {
     
   }
 
+  // @ts-ignore
+  // @ts-ignore
   return (
     <div className="flex justify-center items-center flex-col gap-10">
       <div className="text-5xl mt-20">Авторизация</div>
 
 
       <form onSubmit={form.handleSubmit(onSubmit)}>
-        <Label htmlfor="IIN">ИИН</Label>
+        <Label htmlFor="IIN">ИИН</Label>
         <Input
           type="text"
-          name="IIN"
           placeholder="ИИН"
           {...form.register('IIN')} // Use form.register for field registration
         />
 
-        <Label htmlfor="password" className="mt-5">Пароль</Label>
+        <Label htmlFor="password" className="mt-5">Пароль</Label>
         <Input
           type="password"
-          name="password"
           placeholder="Пароль"
           {...form.register('password')} // Use form.register for field registration
         />

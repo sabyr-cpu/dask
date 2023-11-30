@@ -33,24 +33,24 @@ export default function Notifications() {
       by: "Учитель математики",
       short: "Сильно отстаешь от программы",
       long: "Не делая домашнюю работу, ты все сильнее и сильнее отстаешь от программы. Соберись и возьмись за учебу.",
-      time_passed: "8h",
+      time_passed: "8 часов назад",
       isread: false,
     },
     {
-      title: "Давай встретимся после уроков",
-      by: "МА",
-      short: "Привет го встретимся",
-      long: "Привет го встретимся после уроков, у меня они заканчиваются в 17.00, а у тебя?",
-      time_passed: "3 часа 2",
+      title: "К сожалению нет",
+      by: "СД",
+      short: "Привет калайсын",
+      long: "Привет калайсын, да круто вчера потанцевали,но встретиться не сможем, я занят",
+      time_passed: "3 часа 22 минуты назад",
       isread: true
     },
   ]);
-  function handleDelete(i) {
+  function handleDelete(i: number) {
     let newdata = [...data]
       newdata.splice(i, 1)
       setData(newdata)
   }
-  function handleRead(i) {
+  function handleRead(i: number) {
     let newdata = [...data]
 
     newdata[i].isread = true
@@ -68,18 +68,18 @@ export default function Notifications() {
                 <Card onClick={() => handleRead(k)} className="flex justify-between cursor-pointer">
                   <CardHeader className="space-y-3">
                     <Button variant="link" className="p-0 m-0 h-auto">
-                      <CardTitle className={v.isread ? null : "font-bold"}>
+                      <CardTitle className={v.isread ? undefined : "font-bold"}>
                         {v.title}
                       </CardTitle>
                     </Button>
-                    <CardDescription className={v.isread ? null : "font-bold"}>
-                      By: {v.by}
+                    <CardDescription className={v.isread ? undefined : "font-bold"}>
+                      От: {v.by}
                       <br />
                       {v.short}
                     </CardDescription>
                   </CardHeader>
                   <Button variant="outline" className="m-6">
-                    Read...
+                    Подробнее
                   </Button>
                 </Card>
               </DialogTrigger>
@@ -93,7 +93,7 @@ export default function Notifications() {
                 </div>
                 <DialogFooter>
                   <DialogClose asChild>
-                    <Button type="submit" variant="destructive" onClick={() => handleDelete(k)}>Delete</Button>
+                    <Button type="submit" variant="destructive" onClick={() => handleDelete(k)}>Удалить</Button>
                   </DialogClose>
                 </DialogFooter>
               </DialogContent>
